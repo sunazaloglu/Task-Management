@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+/* Light Theme */
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #e0e0e0;
+}
+
+/* Card Styles */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+  border: 1px solid #e9ecef;
+}
+
+body.dark-theme .card {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Column Headers */
+h4 {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+body.dark-theme h4 {
+  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Dark theme button */
+body.dark-theme .btn-primary {
+  background: linear-gradient(45deg, #4a5568, #2d3748);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .theme-toggle {
+  background: rgba(45, 55, 72, 0.9);
+  color: #e0e0e0;
+}
+
+/* Task Card Dark Theme */
+body.dark-theme .task-card {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e0e0e0;
+}
+
+body.dark-theme .task-card .card-title {
+  color: #63b3ed;
+}
+
+body.dark-theme .task-card .card-subtitle {
+  color: #a0aec0;
+}
+
+/* Column Drop Areas */
+.column-drop-area {
+  min-height: 500px;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+body.dark-theme .column-drop-area {
+  background: #1a202c;
+  border: 1px solid #4a5568;
+}
+
+.column-drop-area.dragging-over {
+  background: #e9ecef;
+}
+
+body.dark-theme .column-drop-area.dragging-over {
+  background: #2d3748;
+}
+
+/* Delete Area */
+.delete-area {
+  min-height: 100px;
+  border: 2px dashed #dc3545;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background: #f8f9fa;
+}
+
+body.dark-theme .delete-area {
+  border-color: #e53e3e;
+  background: #1a202c;
+  color: #e0e0e0;
+}
+
+body.dark-theme .delete-area.dragging-over {
+  background: #2d3748;
+  border-color: #fc8181;
+}
+
+body.dark-theme .delete-area .text-muted {
+  color: #718096 !important;
+}
+
+body.dark-theme .delete-area .text-danger {
+  color: #e53e3e !important;
+}
+
+body.dark-theme .delete-area .card {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Modal Dark Theme */
+body.dark-theme .modal-content {
+  background: #2d3748;
+  color: #e0e0e0;
+  border: 1px solid #4a5568;
+}
+
+body.dark-theme .modal-header {
+  border-bottom: 1px solid #4a5568;
+}
+
+body.dark-theme .modal-footer {
+  border-top: 1px solid #4a5568;
+}
+
+body.dark-theme .form-control {
+  background: #1a202c;
+  border: 1px solid #4a5568;
+  color: #e0e0e0;
+}
+
+body.dark-theme .form-control:focus {
+  background: #1a202c;
+  border-color: #63b3ed;
+  color: #e0e0e0;
+  box-shadow: 0 0 0 0.2rem rgba(99, 179, 237, 0.25);
+}
+
+body.dark-theme .form-label {
+  color: #e0e0e0;
+}
+
+/* Edit Button */
+.edit-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.position-relative:hover .edit-btn {
+  opacity: 1;
+}
+
+body.dark-theme .edit-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.edit-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+body.dark-theme .edit-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
