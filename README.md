@@ -34,7 +34,7 @@ A modern, user-friendly task management application built with React, TypeScript
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd drag-and-drop
+   cd task management
    ```
 
 2. **Install dependencies**
