@@ -44,17 +44,31 @@ A modern, user-friendly task management application built with React, TypeScript
    pnpm install
    ```
 
-3. **Start development server**
+3. **Install Tailwind CSS (if not already installed)**
+   ```bash
+   npm install -D @tailwindcss/vite
+   # or
+   pnpm add -D @tailwindcss/vite
+   ```
+
+4. **Start development server**
    ```bash
    npm run dev
    # or
    pnpm dev
    ```
 
-4. **Open in browser**
+5. **Open in browser**
    ```
    http://localhost:5173
    ```
+
+### Troubleshooting
+
+If you encounter the `@tailwindcss/vite` error:
+```bash
+npm install @tailwindcss/vite
+```
 
 ## 🛠️ Technologies
 
